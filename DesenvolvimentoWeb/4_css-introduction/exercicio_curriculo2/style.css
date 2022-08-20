@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main {
+    background-color: rgb(230, 199, 141);
+}
+
+header {
+    background-color: rgb(240, 186, 86);
+    text-align: center;
+    padding: 3px;
+    margin-bottom: -20px;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+h2 {
+    background-color: rgb(237, 194, 114);
+    border-bottom: solid rgb(255, 149, 0);
+    padding: 5px;
+}
+
+ul {
+    padding-left: 0px;
+    list-style-position: inside;
+}

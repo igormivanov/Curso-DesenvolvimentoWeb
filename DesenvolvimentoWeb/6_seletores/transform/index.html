@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+
+    <style>
+
+        /*
+            A difereça entre transform e postion é:
+            quando é colocado % para a movimentação deles
+            % no transform é relativo a seu proprio tamanho
+            % no postion é relativo ao tamanho do elemento pai
+        */
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .div1 {
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            transform: translate(50%, 50%);
+
+            /* 
+            position: relative;
+            top: 50px;
+            left: 50px;
+            */
+        }
+
+        .div2 {
+            width: 150px;
+            height: 50px;
+            background-color: blue;
+            position: relative;
+            left: 50%;
+        }
+
+        .div3 {
+            width: 50%;
+            overflow: hidden;
+            border: solid 2px black;
+        }
+
+        .div3-interna {
+            background-color: yellow;
+            transform: translate(80%, 25px);
+        }
+
+        .div4 {
+            width: 50%;
+            overflow: hidden;
+            border: solid 2px black;
+        }
+
+        .div4-interna {
+            background-color: yellow;
+            transform: rotate(-45deg);
+        }
+
+        .div5 {
+            width: 50%;
+            overflow: hidden;
+            border: solid 2px black;
+        }
+
+        .div5-interna {
+            background-color: yellow;
+            transform: rotate(10deg);
+            transform-origin: left top;
+        }
+
+        .div6 {
+            width: 50%;
+            overflow: hidden;
+            border: solid 2px black;
+        }
+
+        /* A ordem do transform inporta */
+        .div6-interna {
+            background-color: yellow;
+            transform: rotate(30deg) translate(50px);
+        }
+
+        .div7 {
+            width: 50%;
+            overflow: hidden;
+            border: solid 2px black;
+        }
+
+        .div7-interna {
+            background-color: yellow;
+            transform: translate(50px) rotate(30deg);
+        }
+
+        .div8 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            transform: skew(-30deg, 50deg);
+        }
+
+        .div9 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transform: scale(.5) translateX(50%);
+            transition: transform .5s;
+        }
+
+        .div9:hover {
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="div1">div1</div>
+    <div class="div2">div1</div>
+    <hr>
+    <div class="div3">
+        <div class="div3-interna">conteúdo qualquer</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam facilis non, nostrum quos obcaecati. Mollitia quasi sit earum. Provident accusamus, cupiditate iure explicabo nostrum quaerat laudantium saepe possimus non!</p>
+    </div>
+
+    <hr>
+
+    <div class="div4">
+        <div class="div4-interna">conteúdo qualquer</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam facilis non, nostrum quos obcaecati. Mollitia quasi sit earum. Provident accusamus, cupiditate iure explicabo nostrum quaerat laudantium saepe possimus non!</p>
+    </div>
+
+    <hr>
+
+    <div class="div5">
+        <div class="div5-interna">conteúdo qualquer</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam facilis non, nostrum quos obcaecati. Mollitia quasi sit earum. Provident accusamus, cupiditate iure explicabo nostrum quaerat laudantium saepe possimus non!</p>
+    </div>
+
+    <hr>
+
+    <div class="div6">
+        <div class="div6-interna">conteúdo qualquer</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam facilis non, nostrum quos obcaecati. Mollitia quasi sit earum. Provident accusamus, cupiditate iure explicabo nostrum quaerat laudantium saepe possimus non!</p>
+    </div>
+
+    <hr>
+
+    <div class="div7">
+        <div class="div7-interna">conteúdo qualquer</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime veniam facilis non, nostrum quos obcaecati. Mollitia quasi sit earum. Provident accusamus, cupiditate iure explicabo nostrum quaerat laudantium saepe possimus non!</p>
+    </div>
+
+    <hr>
+    <div class="div8">div8</div>
+    <div class="div9">div9</div>
+</body>
+</html>

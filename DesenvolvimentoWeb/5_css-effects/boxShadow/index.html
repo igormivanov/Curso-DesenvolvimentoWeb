@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS efeitos</title>
+
+    <style>
+        #radius {
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+
+            border-radius: 50px 100px / 100px 50px;
+
+            box-shadow: -10px -10px 10px 0px black;
+            /* 
+            eixo x, eixo y, esfumaçamento, tamanho, cor
+            */
+        }
+        
+        /* TEXT - SHADOW */
+        h1 {
+            font-family: sans-serif;
+            font-size: 50px;
+            text-align: center;
+            text-shadow: -1px 1px 0 rgb(60, 60, 60), 
+            -2px 2px 0 rgb(91, 91, 91),
+            -3px 3px 0 rgb(135, 135, 135),
+            -4px 4px 0 rgb(191, 191, 191),
+            -5px 5px 0 rgb(233, 233, 233);
+        }
+
+        /* GRARDIENTE */
+        html, bodt {
+            height: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(to top, blue, red)
+            /* 50deg */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS efeitos</h1>
+
+    <div id="radius"></div>
+</body>
+</html>

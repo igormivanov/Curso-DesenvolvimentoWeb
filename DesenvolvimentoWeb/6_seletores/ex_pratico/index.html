@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        /* Todo tag a que tenha o atributo target igual "_blank" */
+        a[target="_blank"]::after {
+            content: url(#);
+            display: inline-block; 
+            margin-left: 5px;
+        }
+
+        a[href$='.pdf']::before {
+            content: url(#);
+            display: inline-block;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>estrutura basica</h1>
+
+    <a href="http://serfrontend.com" target="_blank">link externo</a><br>
+    <a href="www.pdf">download do PDF</a>
+</body>
+</html>

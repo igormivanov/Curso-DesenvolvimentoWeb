@@ -1,0 +1,26 @@
+@charset "UFT-8";
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-variant: small-caps;
+    color: #00ff00;
+}
+
+p {
+    font-variant: normal;
+    text-align: left;
+    text-decoration: underline;
+    text-indent: 20px;
+    text-transform: capitalize;
+    ;
+}
+
+body {
+    background-color: #ccc;
+}
+
+.destaque {
+    background-color: rgb(248, 205, 205);
+}

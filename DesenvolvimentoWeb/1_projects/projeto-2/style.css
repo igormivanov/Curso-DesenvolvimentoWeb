@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+body {
+    background-color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-image: url("./img/topo.jpg");
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+}
+
+nav {
+    background-color: #1d394c;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #3e647b;
+    font-size: 12px;
+}
+
+ul {
+    display: flex;
+    justify-content: end;
+}
+
+li {
+    list-style: none;
+    margin: 20px;
+    margin-right: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: #3e647b;
+}
+
+a:hover{
+    color: rgba(0, 0, 0, 0.404);
+}
+
+main {
+    width: 1000px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+
+#portifolio {
+    text-align: center;
+}
+
+#portifolio h1 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#portifolio p {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+#pictures {
+    text-align: center;
+}
+
+.img {
+    display: inline-block; 
+    width: 32%;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+#about1 {
+    background-image: url("img/bg_detalhe.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    height: 400px;
+    text-align: center;
+}
+
+#about2 {
+    width: 300px;
+    height: 100px;
+}
+
+#contact {
+    color: #2B485A;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    line-height: 7px;
+    font-size: 20px;
+}
+
+aside{
+    width: 1000px;
+}
+
+footer {
+    background-color: #041119;
+    color: #2B485A;
+    text-align: center;
+    padding: 2px;
+    letter-spacing: 2px;
+}

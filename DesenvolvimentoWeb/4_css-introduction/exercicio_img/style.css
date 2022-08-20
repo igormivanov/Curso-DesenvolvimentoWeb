@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body {
+    color: white;
+    font-size: 22px;
+    font-family: sans-serif;
+    width: 700px;
+    margin: auto;
+    background-image: url(./fonts/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right bottom;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.img-html {
+    float: left;
+}
+
+.img-css {
+    float: right;
+}

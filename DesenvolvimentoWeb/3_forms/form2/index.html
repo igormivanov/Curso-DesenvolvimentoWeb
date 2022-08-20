@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms 2</title>
+
+    <style>
+
+        label {
+            display: block;
+        }
+
+        fieldset {
+            width: 500px;
+            margin: auto;
+        }
+
+        input {
+            display: block;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <h1>Exemplo de formulario</h1>
+
+    <form action="#" method="post">
+        <fieldset>
+
+            <legend>Dados pessoais</legend>
+
+            <label for="">Email</label>
+            <input type="email" required placeholder="digite um email válido">
+
+            <label for="">numero de filhos</label>
+            <input type="number" min="0" max="10" step="0.5">
+
+            <label for="">nascimento</label>
+            <input type="date" name="date" id="date" min="2018-01-30" max="2030-01-30">
+
+            <!-- <p>Sexo:</p>
+            <label for="">Masculino</label>
+            <input type="radio" name="sexo" value="M">
+            <label for="">Feminino</label>
+            <input type="radio" name="sexo" value="F"> -->
+
+            <!-- O servidor recebera "sexo=F" caso escolha feminino -->
+            
+            <p>Sexo:</p>
+            <label>
+                <input type="radio" name="sexo" value="M">
+                Masculino
+            </label>
+
+            <label>
+                <input type="radio" name="sexo" value="F">
+                Feminino 
+            </label>
+            <!-- Nessa formatação é possivel selecionar o sexo clicando na palavra "masculino" ou "feminino"-->
+
+            <select name="estado" id="">
+                <option value="0">Selecione</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="ES">Espirito Santo</option>
+            </select>
+
+            <fieldset>
+                <legend>Área de interesse</legend>
+
+                <label>
+                    <input type="checkbox" name="html" value="html">
+                    HTML
+                </label>
+
+                <label>
+                    <input type="checkbox" name="css" value="css">
+                    CSS
+                </label>
+
+                <label>
+                    <input type="checkbox" name="js" value="js">
+                    JS
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Mensagem</legend>
+
+                <textarea  style="resize: none" name="msg" id="" cols="30" rows="10">
+                </textarea>
+
+                <textarea readonly style="resize: none" name="contrato" id="" cols="30" rows="10">Aqui entra o texto do contrato que precisa ser aceito
+                </textarea>
+
+                <label for="">
+                    <input type="checkbox">
+                    Li e aceito
+                </label>
+            </fieldset>
+
+
+            <input type="submit" value="Enviar">
+            <!-- Utilizado para enviar formularios -->
+
+            <input type="button" value="Pressione">
+            <!-- Utilizado juntamento com o Javascript, apenas um botão-->
+
+            <input type="reset" value="resetar">
+            <!-- Utilizado para resetar os dados-->
+
+        </fieldset>
+    </form>
+</body>
+</html>
+
+<!--
+    Atributos:
+
+    maxlenght="10" (Apenas consegue digitar 10 caracteres)
+    checked (Já começa checkado a caixa)
+    mutiple (Pode selecionar mais de uma opção no select)
+    size="3" (Aparece apenas as 3 primeiras opções, escondendo as outras)
+
+    Entradas:
+
+    url
+    tel
+    range
+    time
+    color
+-->
