@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação - CSS</title>
+    <!-- 
+        
+    transition-property:            Dizer qual a propriedade que tera o transition
+    transition-duration:            Tempo
+    transition-timing-function:     Determinar aceleração
+    transition-delay:               Se ela tem um atrazo ou não
+
+
+
+    transition                  vs              animation
+
+    -Apenas para                          -transições complexas
+     transições simples                    (com um ou mais keyframes)
+    
+    -Dependem de interação                -não dependem de interação
+     usuário (:hover, :focus               do usuário (mas ainda podemos
+     :active) ou do Javascript             animar com Javascript
+     para adicionar/remover 
+     uma classe                           -Maior controle sobre a animação
+
+
+    Somente valores númericos podem ser animados (10px, .5, 58%, 10em, #cf0, red)
+    Valores como (auto, arial, hidden, entre outros) não podem ser  animados
+
+    Propriedades mais performáticas para animalçao são: transform e opacity
+
+    Se preciso, utilize will-change para tentar melhorar a performace da animação
+    (Indica para o browser que haverá uma animação)
+
+
+    animation:
+    animation-name
+    animation-duration
+    animation-delay
+    animation-timing-function
+    animation-interation-count (Número de vezes)
+    animation-direction
+    animation-fill-mode (Como deve terminar/começar)
+    animation-play-state 
+    -->
+
+    <style>
+
+        @keyframes anda {
+            0% {
+                transform: translateX(0);
+                background-color: yellow;
+            }
+
+            25%, 75%{
+                height: 80px;
+                background-color: blueviolet;
+            }
+
+            100% {
+                transform: translateX(300px);
+                background-color: blue;
+            }
+        }
+
+        #anima-time div {
+            width: 80px;
+            height: 50px;
+            border: 2px solid red;
+        }
+
+        #anima-time div:nth-child(1) {
+
+            /* IN- INicio - acelera
+            OUT -finOUT - desacelera */
+
+            /* animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out; */
+
+            animation: anda 2s ease-in-out;
+        }
+
+        #anima-time div:nth-child(2) {
+
+            /* animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+
+            animation: anda 2s ease-in-out infinite alternate;
+        }
+
+        #anima-time div:nth-child(3) {
+
+            /* animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate; */
+
+            animation: anda 2s ease-in-out 1s infinite alternate;
+        }
+
+        #anima-time div:nth-child(4) {
+
+            background-color: rgb(196, 95, 95);
+
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+
+        }
+
+        #anima-time div:nth-child(5) {
+
+            background-color: rgb(196, 95, 95);
+
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-play-state: running;
+
+        }
+    
+        #anima-time div:nth-child(5):hover {
+            animation-play-state: paused;
+        }
+
+        .code {
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Animaton</h2>
+    <p class="code">
+        <code>
+        animation: name duration timing-function delay
+        iteration-count direction fill-mode play-state
+        </code>
+    </p>
+    <div id="anima-time">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>
