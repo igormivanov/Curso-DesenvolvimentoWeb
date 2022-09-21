@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+
+    <!-- <script>
+
+        var n1 = parseInt(prompt('digite um número'));
+        var n2 = parseInt(prompt('digite outro número'));
+
+        var media = (n1 + n2) / 2;
+        alert(media > 5);
+
+        if(media > 5) {
+            alert("Parabéns! Você foi aprovado");
+        } else {
+            alert("Desculpe, mas não foi dessa vez");
+        }
+        
+    </script> -->
+
+    <script>
+
+        var jogador1 = parseInt(prompt('digite um número'));
+        var jogador2 = parseInt(prompt('digite outro número'));
+
+        if(jogador1 == jogador2) {
+            alert("Empate!");
+        } else {
+            let numero = parseInt(Math.random() * 2)
+            alert(numero)
+            if(numero == 1) {
+                if(jogador1 > jogador2){
+                    alert("Jogador1 ganhou")
+                } else {
+                    alert("Jogador2 ganhou")
+                }
+            } else {
+                if(jogador1 < jogador2) {
+                    alert("Jogador1 ganhou")
+                } else {
+                    alert("Jogador2 ganhou")
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>
