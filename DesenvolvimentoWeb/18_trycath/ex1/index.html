@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch</title>
+</head>
+<body>
+    <h1>Lógica de Programação</h1>
+
+    <button onclick="mostrarArea()">Calcular Área do Retângulo</button>
+
+    <div id="output"></div>
+
+    <script>
+
+        function mostrarArea(){
+            var largura = parseFloat(prompt('Digite a largura do retângulo'));
+            var altura = parseFloat(prompt('Digite a altura do retângulo'));
+
+            try{
+                var area = calcularArea(largura, altura);
+            }catch(e){
+                alert(e);
+                return;
+            }
+
+            document.querySelector('#output'). innerHTML = area;
+        }
+
+        function calcularArea(largura, altura){
+
+            if( isNaN(largura) || isNaN(altura)){
+                throw new Error('O valor adicionado é inválido');
+            }
+
+            return largura * altura;
+        }
+
+    </script>
+</body>
+</html>
