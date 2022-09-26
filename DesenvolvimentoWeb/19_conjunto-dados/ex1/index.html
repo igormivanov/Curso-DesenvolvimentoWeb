@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+    <h1>Lógica de programação Javascript</h1>
+
+    <button onclick="diasemana()">Dia da semana</button>
+
+    <script>
+
+
+        var dias = new Array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado');
+
+        var hoje = new Date();
+        var diaSemana = hoje.getDay();
+        // .getDay = Retorna o dia da semana
+
+        function diasemana(){
+            alert(dias[diaSemana]);
+        }
+
+
+    </script>
+</body>
+</html>

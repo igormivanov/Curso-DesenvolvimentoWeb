@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+    <h1>Lógica de programação Javascript</h1>
+
+
+    <div id="output"></div>
+
+    <script>
+
+        // var nomes = new Array('Ana', 'Igor');
+        // var nomes = ['Ana', 'Igor'];
+   
+        // var produtos = new Object('nome', 'preco');
+        // var prod = {'nome': 'caneta', 'preco': 1.1};
+
+        // var produtos = [prod, {'nome': 'caneta', 'preco': 2}];
+
+        // obj = {}, array []
+
+
+        var produtos = [
+            {'nome': 'caneta', 'preco': 2},
+            {'nome': 'lapis', 'preco': 1.2},
+            {'nome': 'borracha', 'preco': 0.5}
+        ];
+
+        var msg = "";
+
+        for(var i = 0; i < produtos.length; i++){
+            console.log(produtos[i].preco);
+
+            msg += "<h2>Produtos: "+ produtos[i].nome +"</h2>";
+            msg += "<p>Preço: "+ produtos[i].preco +"<p>";
+        }
+
+        document.querySelector('#output').innerHTML = msg
+    </script>
+</body>
+</html>
