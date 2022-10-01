@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ept-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Escopo</title>
+</head>
+<body>
+    
+    <script>
+
+        // Escopo Global
+        var x = 0;
+        var y;
+
+        function mostraX(){
+            /* 
+                Escopo local
+
+                Declarar as variáveis num escopo local é uma boa prática
+                Pois fora da function elas não existem, assim não existe 
+                conflito entre variáveis
+
+                y = 10;
+                Se uma variável fosse declarada assim, sem o var porém no 
+                escopo local, ela se tornarial de escopo global. Portanto 
+                evite
+
+            */
+            var x = 10;
+            var y = 20;
+            
+            console.log('X Escopo local: ', x)
+            console.log('Y Escopo local: ', y)
+        }
+
+        mostraX();
+
+        console.log('X Escopo local: ', x)
+        console.log('Y Escopo local: ', y)
+
+    </script>
+
+</body>
+</html>

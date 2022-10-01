@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Funções</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // função literal
+        function somar(n1,n2){
+            // corpo da função
+            return n1+n2;
+        }
+
+        var soma = somar(10, 20);
+        console.log('Resultado: ', soma);
+
+        somar.teste = 'propriedade da função';
+        console.log(somar.teste);
+
+        // função sem nome
+        var teste = function(){
+            console.log('teste');
+        }; // Quando a função é desse tipo, é necessário o ponto e virgula no final
+
+        // É possível chamar a variável como função
+        teste();
+
+        // --------------------------------------------
+
+        // passar uma função por parametro
+        var teste = function(f){
+            f();
+        }; 
+
+        teste(function(){
+            console.log('Função passada por parâmetro')
+        });
+
+        /* 
+            É possíve digitar no console o nome da função para saber o seu real nome
+            somar.nome (retorna somar)
+            teste.nome (retorna teste no browser, porém deveria ser uma string vazia pois é um função anônima)
+        */
+
+    </script>
+</body>
+</html>
