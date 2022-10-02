@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DOM</title>
+</head>
+<body>
+    <!--
+
+        Bootstrap é  um arquivo(biblioteca) CSS com várias classes, fazendo que a sua página receba
+        uma formatação visual mais elegante.    
+        ctrl + u = exibir código fonte da página
+
+        *****************************
+
+        DOM =  Document Object Model
+        ele cria um objeto que faz uma representação estruturada do seu documento HTML
+
+        document.getElementById('id')
+        document.getElementsByClassName('class')
+        document.getElementsByTagName('p')
+
+        Pelo ClassName é necessário indicar o indice do elemento, mesmo que apenas exista um
+        Exemplo: document.getElementByClassName('class')[0].textContent = 'text alterado'
+
+
+        QuerySelector = retorna apenas o primeiro elemento
+        QuerySelectorAll = retorna uma coleção/ "arry", precisa passar o indice []
+        Ambos necessitam passar o parâmetro como css, por exemplo com # para id e . para class
+
+        document.querySelector('#id')
+        document.querySelector('#id p')
+
+        document.querySelectorAll('#d h2')[0].textContent = 'Alterado'
+        document.querySelector('p').textContent = 'Alterado'
+        Mesmo que tenha vários <p>, por se tratar de querSelector sem o All, ele apenas modificará o primeiro <p>
+
+        *****************************
+
+        .value = Propriedade que recupera e insere um novo valor em um campo de formulário
+        Propriedades (.value, .textcontent, .innerHTML) servem para definir um novo valor ou recuperar o valor atual
+
+        Exemplos:
+        HTML:
+        <input type="text" id="nome">
+
+        Javascript:
+        // Define um novo valor
+        document.querSelector('#nome').value = 'Igor'
+
+        *****************************
+
+        HTML:
+        <input type="text" id="nome" value="Digite aqui">
+
+        Javascript:
+        // Recupera o value do input...
+        var valor = document.querySelector("#nome").value
+        // .. E armazena  a string na variável valor
+
+        *****************************
+
+        HTML:
+        <div id="msg">0</div>
+
+        Javascript:
+        // recupera o texto da div com o id #msg
+        var str = document.quarySelector("#msg").textContent;
+        //str recebe a string "0"
+
+    -->
+
+    <h1>Curso Javascript DOM</h1>
+
+    <input type="text" id="name" placeholder="Digite seu nome">
+    <button onclick="escrever()">Clique</button>
+    <div id="msg"></div>
+
+    <script>
+
+        /* Exemplo com nome digitado pelo prompt
+
+        // document.querySelector('h1').textContent = 'Paragrafo alterado vis js'
+        (function(){
+            var nome = prompt('Qual seu nome?');
+            // document.querySelector('#msg').textContent = 'Bem-vindo, <br>' + nome + '</br>';
+            document.querySelector('#msg').innerHTML = 'Bem-vindo, <b>' + nome + '</b>';
+        })()
+
+        */
+
+        var name2 = document.querySelector('#name')
+
+        function escrever(){
+            var name = name2.value;
+
+            // document.querySelector('#msg').textContent = 'Bem-vindo, <br>' + nome + '</br>';
+            document.querySelector('#msg').innerHTML = 'Bem-vindo, <b>' + name + '</b>';
+        }
+
+
+
+    
+    </script>
+
+</body>
+</html>
