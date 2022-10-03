@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Objetos</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            Objetos nativos
+            teste.valueOf = acesso ao valor primitivo 
+
+            Sintaxe Formal
+            let obj = new Object()
+
+            Sintaxe Literal ( Indicada )
+            obj = {"cor": "vermelho", "nome": "Igor"}
+
+            Dependendo do ambiente de onde estamos trabalhando
+            Por exeplos: propriedades e métodos para browser = alert('dsad')
+
+            [1,2] === [1,2] => False, são objestos diferentes 
+            Pois a comparação feita não e por valor e sim por referência
+        */
+
+        let hoje = new Date();
+
+        let x = [0];
+
+        function mudaArr(x){
+            let y = x; // y Está apontando para o mesmo lugar de memória (mesmo array)
+            y.push(2); // Portanto ao dar push para na variável y, é adicionado ná variável x também
+            console.log(y);
+        }
+
+        mudaArr(x);
+        console.log(x);
+
+        // **************************
+
+        let n = 0;
+        function mudaN(n){
+            let = n2 = n;
+            console.log(++n2);
+        }
+
+        mudaN(n);
+        console.log(n);
+
+    </script>
+
+</body>
+</html>
